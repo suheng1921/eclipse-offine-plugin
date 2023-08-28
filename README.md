@@ -2,7 +2,7 @@
 需要在无网路环境中使用Eclipse，但是Eclipse常用的插件需要联网进行下载安装，官方没有直接提供插件离线包的下载。经过一顿搜索，发现了插件离线包制作的方法，在此记录下并存一些常用的插件离线包。
 
 ## 制作步骤
-1. 在[Eclipse Marketplace插件市场](https://marketplace.eclipse.org/)搜索想要制作离线包的插件。
+1. 在 [Eclipse Marketplace插件市场](https://marketplace.eclipse.org/) 搜索想要制作离线包的插件。
 2. 找到插件的`Update site url`。
 3. 在本地新建一个文件夹，用于存放插件离线相关文件。
 4. 执行以下两条命令，提取插件的离线文件。
@@ -16,7 +16,7 @@
 
 ## 示例
 以制作`Darkest Dark Theme with DevStyle`插件离线安装包为例：
-1. 在[Eclipse Marketplace插件市场](https://marketplace.eclipse.org/)搜索`Darkest Dark Theme with DevStyle`插件
+1. 在 [Eclipse Marketplace插件市场](https://marketplace.eclipse.org/) 搜索`Darkest Dark Theme with DevStyle`插件
    ![image](https://github.com/suheng1921/eclipse-offine-plugin/assets/85484756/d440c908-9a7f-4a9c-99ab-97aeecf5cbd3)
 
 2. 找到插件的`Update site url`并记录：`https://www.genuitec.com/updates/devstyle/ci/`
@@ -24,7 +24,7 @@
 
 3. 在D盘新建目录`Darkest_Dark_Theme_with_DevStyle`，绝对路径为`D:/Darkest_Dark_Theme_with_DevStyle/`
 4. 进入`Darkest_Dark_Theme_with_DevStyle`目录，鼠标右键选择`在终端中打开`，在此路径下打开命令行终端
-5. 执行命令，提取`Darkest_Dark_Theme_with_DevStyle`的离线文件
+5. 执行命令，提取`Darkest_Dark_Theme_with_DevStyle`的离线文件<br>
    命令1：
    ```shell
    E:/app2/eclipse/eclipsec.exe -nosplash -application org.eclipse.equinox.p2.metadata.repository.mirrorApplication -source https://www.genuitec.com/updates/devstyle/ci/ -destination file:///D:/Darkest_Dark_Theme_with_DevStyle/
